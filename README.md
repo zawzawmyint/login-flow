@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# Login Flow App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A robust and modern React Native application built with Expo, implementing a specific login flow with biometric authentication and PIN security.
 
-## Get started
+## Task Overview
 
-1. Install dependencies
+The goal of this project is to implement the login flow exactly as demonstrated in the provided Figma reference.
+
+- **Reference:** [Figma Prototype]()
+- **Key Requirements:**
+  - **PIN Length:** Must be exactly 4 digits.
+  - **Theme:** Customized app theme color.
+  - **Interaction:** Follow the specific flow outlined below.
+
+## Expected Interaction Flow
+
+This is the step-by-step user journey implemented in the app:
+
+1.  **Splash Screen:** Initial launch screen.
+2.  **Language Selection:** User selects **Thai** language.
+3.  **Terms of Service:** User accepts the Terms of Service.
+4.  **Login:** Tap "Log in".
+5.  **OTP Verification:** Request and enter OTP code.
+6.  **Identity Confirmation:** Tap anywhere to confirm identity (auto-pass simulation).
+7.  **Set PIN:** Enter digit "5" (repeatedly) to set a new PIN.
+8.  **Confirm PIN:** Re-enter digit "5" to confirm.
+9.  **Biometric Setup:** User chooses to **Skip** fingerprint setup.
+10. **Biometric Auth:** User **Cancels** fingerprint authentication.
+
+## Tech Stack
+
+- **Framework:** [React Native](https://reactnative.dev/) (v0.81.5) with [Expo](https://expo.dev/) (SDK 54)
+- **Navigation:** [Expo Router](https://docs.expo.dev/router/introduction/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Localization:** [i18n-js](https://github.com/fnando/i18n-js) & [expo-localization](https://docs.expo.dev/versions/latest/sdk/localization/)
+- **UI:** [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/), [Expo Vector Icons](https://icons.expo.fyi/), Custom Components
+- **Auth Components:** `react-native-otp-entry`, Custom PIN Pad, Local Authentication (Biometrics)
+
+## Installation and Running
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [Expo Go](https://expo.dev/client) app on your mobile device.
+
+### Steps
+
+1. **Clone & Install:**
 
    ```bash
+   git clone https://github.com/zawzawmyint/login-flow.git
+   cd login-flow
    npm install
    ```
 
-2. Start the app
-
+2. **Run the App:**
    ```bash
-   npx expo start
+   npm run start
    ```
+   - Press `a` for Android, `i` for iOS, or scan the QR code with Expo Go.
 
-In the output, you'll find options to open the app in a
+## Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+login-flow/
+├── app/                 # Expo Router screens and layouts
+│   ├── (auth)/          # Authentication group (Sign In, PIN, OTP, etc.)
+│   └── ...
+├── components/          # Reusable UI components
+│   ├── general/         # Generic components (Buttons, Inputs, Text)
+│   ├── global/          # Layout containers
+│   └── ...
+├── constants/           # App constants (Colors, Styles)
+├── hooks/               # Custom React hooks (useLocalization, etc.)
+├── locales/             # Translation files (en.ts, th.ts)
+├── utils/               # Helper functions
+└── assets/              # Images and fonts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Video Recording: [Link](https://www.figma.com)
