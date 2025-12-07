@@ -11,6 +11,8 @@ export default {
     title: "Welcome to MyApp",
     description:
       "You are successfully signed up. You are now ready to use MyApp.",
+    techStacks: "Tech Stacks:",
+    features: "Features:",
   },
   auth: {
     usernameOrEmail: "Username or Email",

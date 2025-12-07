@@ -10,6 +10,8 @@ export default {
   welcome: {
     title: "ยินดีต้อนรับสู่ MyApp",
     description: "คุณได้สมัครสมาชิกเรียบร้อยแล้ว คุณสามารถใช้ MyApp ได้แล้ว",
+    techStacks: "เทхโนโลยีที่ใช้:",
+    features: "ฟีเจอร์:",
   },
   auth: {
     usernameOrEmail: "ชื่อผู้ใช้หรืออีเมล",

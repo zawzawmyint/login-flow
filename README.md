@@ -6,7 +6,7 @@ A robust and modern React Native application built with Expo, implementing a spe
 
 The goal of this project is to implement the login flow exactly as demonstrated in the provided Figma reference.
 
-- **Reference:** [Figma Prototype]()
+- **Reference:** [Figma Prototype](https://www.figma.com)
 - **Key Requirements:**
   - **PIN Length:** Must be exactly 4 digits.
   - **Theme:** Customized app theme color.
@@ -77,4 +77,4 @@ login-flow/
 └── assets/              # Images and fonts
 ```
 
-Video Recording: [Link](https://www.figma.com)
+Video Recording: [Link](https://drive.google.com/file/d/1xvyS8WSrmd1958DnEUKPX8_nLKTYKvs-/view?usp=sharing)
